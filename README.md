@@ -73,3 +73,17 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+将本地项目和远程仓库建立连接后 同名分支main建立连接后  可能无意中改了点东西  随后通过vscode同步分支到远程报错。 
+zxf@zxf ServerByNestJS % git branch -r
+  NestJS_Project/main
+zxf@zxf ServerByNestJS % git pull
+fatal: refusing to merge unrelated histories
+zxf@zxf ServerByNestJS % git pull -allow-unrelated-histories
+error: did you mean `--allow-unrelated-histories` (with two dashes)?
+zxf@zxf ServerByNestJS % git pull --allow-unrelated-histories
+Auto-merging README.md
+CONFLICT (add/add): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+这样便可以了  
