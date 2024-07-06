@@ -3,14 +3,17 @@
 /node_modules
 /build
 
-# Logs
-logs
-*.log
-npm-debug.log*
-pnpm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
+LOGS_
+# logs
+# *.log
+# npm-debug.log*
+# pnpm-debug.log*
+# yarn-debug.log*
+# yarn-error.log*
+# lerna-debug.log*
+
+# 但不忽略指定文件夹
+!/exception_folder/ /src/logs
 
 # OS
 .DS_Store
