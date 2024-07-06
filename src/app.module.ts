@@ -46,16 +46,6 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'development'}`;
           // logging: true, //使用查询是否打印sql语句 往往在开发环境打开
         }) as TypeOrmModuleOptions,
     }),
-    // TypeOrmModule.forRoot({
-    //   type: 'mysql',
-    //   host: 'localhost',
-    //   port: 3306,
-    //   username: 'root',
-    //   password: '123456',
-    //   database: 'testdb',
-    //   entities: [],
-    //   synchronize: true,
-    // }),
     UserModule,
     RolesModule,
     LogsModule,
