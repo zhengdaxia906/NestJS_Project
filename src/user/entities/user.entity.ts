@@ -1,7 +1,7 @@
-import { Logs } from 'src/logs/entities/logs.entity';
-import { Roles } from 'src/roles/entities/roles.entity';
+import { Logs } from '../../logs/entities/logs.entity';
+import { Roles } from '../../roles/entities/roles.entity';
 // import { Profile } from 'src/profile/entities/profile.entity';
-import { Profile } from 'src/user/entities/profile.entity';
+import { Profile } from '../../user/entities/profile.entity';
 import {
   Entity,
   Column,
