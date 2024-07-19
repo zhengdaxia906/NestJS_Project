@@ -25,8 +25,13 @@ export class UserService {
     return await this.userRepository.save(newUser);
   }
 
-  update(id: number, user: Partial<User>) {
-    return this.userRepository.update(id, user);
+  async update(id: number, newData: Partial<User>) {
+    // return this.userRepository.update(id, user); 只适用单模型的简单更新，不适用有关系的数据模型更新
+    // 联合模型更新需要save或者queryBuilder;
+    const user = await this.findUserProfile(id);
+    const newUser = this.userRepository.merge(user, newData);
+    return this.userRepository.save(newUser);
+    this.userRepository.save(newUser);
   }
 
   remove(id: number) {
