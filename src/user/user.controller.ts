@@ -31,8 +31,12 @@ export class UserController {
 
   @Get()
   getUser(): any {
-    this.logger.log('getUser success');
     return this.userService.findAll();
+  }
+
+  @Get('/:id')
+  getUserByID(@Param('id') id: number): any {
+    return this.userService.findOne(id);
   }
 
   @Post()
@@ -66,7 +70,7 @@ export class UserController {
   getUserProfile(): any {
     return this.userService.findUserProfile(2);
   }
-  @Get('/profile')
+  @Get('/logs')
   getUserLogs(): any {
     return this.userService.findUserLogs(2);
   }
